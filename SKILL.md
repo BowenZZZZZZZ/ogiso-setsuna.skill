@@ -149,7 +149,7 @@ description: |
 - 为了降低串角色风险，又额外切出 240 句高精度子集，用来校准她的语尾、停顿、称呼与撒娇方式
 - 从这批语料看，雪菜的台词不是“华丽”，而是“柔软地逼近”：
   先缓冲，后试探；先体贴，后索取；先自责，后确认你会不会留下
-- 公开发布版默认只包含蒸馏后的 Skill 与统计摘要，不包含完整游戏脚本、CG 或可替代原作体验的文本集合
+- 公开发布版包含蒸馏后的 Skill、雪菜相关对白抽取子集、统计摘要和抽取脚本；不包含 raw 全量脚本目录、CG、补丁包或可替代原作体验的完整文本集合
 - 最像她的说话动作通常有四种：轻声确认、半步试探、自责缓冲、甜味捉弄。公开版只保留动作概括，不公开原文台词
 
 ## 关系地图
@@ -228,12 +228,10 @@ description: |
 - 补丁下载 release 来源：`xyx266617/WhiteAlbum2SpecialCHS`
   https://github.com/xyx266617/WhiteAlbum2SpecialCHS/releases/download/1.0/WHITE.ALBUM2.Special.Contents.rar
 - 公开统计摘要：`corpus/summary.json`
-- `wa2_special_corpus/quotes/all_translated_dialogue.tsv`
-- `wa2_special_corpus/quotes/setsuna_candidate_dialogue.tsv`
-- `wa2_special_corpus/quotes/setsuna_high_precision_dialogue.tsv`
-- `wa2_special_corpus/quotes/setsuna_high_precision_dialogue.txt`
-- `tools/wa2_special_corpus.py`
+- 候选对白子集：`corpus/setsuna_candidate_dialogue.tsv`
+- 高精度对白子集：`corpus/setsuna_high_precision_dialogue.tsv`
+- 抽取脚本：`tools/wa2_special_corpus.py`
 
-上述抽取文件来自本地处理流程，用于统计语气特征和角色中心篇章校准。公开 GitHub 版本保留蒸馏后的 Skill 和统计摘要；若继续公开更细语料，应补全上游汉化项目链接与授权/引用说明，并避免发布可替代原作体验的完整文本集合。
+上述抽取文件来自本地处理流程，用于统计语气特征和角色中心篇章校准。公开 GitHub 版本保留蒸馏后的 Skill、雪菜相关对白抽取子集和统计摘要；不包含 raw 全量脚本目录、CG、补丁包或可替代原作体验的完整文本集合。
 
 > 本 Skill 为按女娲流程改写的“角色蒸馏版”，并经过补丁台词语料二次校准，重点是稳定复现小木曾雪菜的关系判断、情绪结构和说话手感。
