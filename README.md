@@ -1,25 +1,33 @@
-# ogiso-setsuna-perspective
+# 小木曾雪菜.skill
 
-A Codex skill that distills the relationship logic, emotional structure, and response style of Setsuna Ogiso from *WHITE ALBUM2*.
+这是一个 Codex Skill，用来复现《WHITE ALBUM2》角色小木曾雪菜的关系判断、情绪结构和表达手感。
 
-This repository contains the skill file only. It does not include the game script, full dialogue corpus, CG assets, patch files, or other copyrighted source material.
+这个仓库的目标不是保存或分发游戏文本，而是保存一个“角色思维与表达方式”的蒸馏结果：它可以用于角色扮演、关系分析、语气模仿、剧情理解边界提醒，以及“雪菜会怎么想/怎么说”一类任务。
 
-## Files
+## 仓库内容
 
-- `SKILL.md`: the installable Codex skill.
+- `SKILL.md`：可安装的 Codex Skill。
+- `corpus/summary.json`：本地抽取流程得到的语料统计摘要，不包含逐句台词。
 
-## Source Notes
+## 语料来源说明
 
-The skill was derived from:
+本 Skill 的语料校准来自 GitHub 上公开的《WHITE ALBUM2 Special Contents》中文汉化插件/补丁项目：
 
-- Official public character and special pages for *WHITE ALBUM2*.
-- Public plot summaries and character reference pages.
-- Public player essays and route analyses, used only as lower-weight interpretive material.
-- A local private dialogue-extraction workflow from `WHITE ALBUM2 Special Contents` Chinese fan-translation text, used only for aggregate style calibration.
+- 汉化文本项目：<https://github.com/xhyf2666/WhiteAlbum2SpecialCHS>
+- 补丁下载 release 来源：<https://github.com/xyx266617/WhiteAlbum2SpecialCHS/releases/download/1.0/WHITE.ALBUM2.Special.Contents.rar>
 
-The local dialogue corpus was used to estimate speech-pattern features such as punctuation rhythm, address terms, softening particles, and relationship-centered conversational moves. The corpus itself is not published here.
+该项目中的汉化文本被本地脚本抽取后，用于统计小木曾雪菜相关篇章的语气特征，例如停顿、语尾、称呼、试探性表达和关系修复动作。
 
-## Copyright Boundary
+目前本仓库只上传蒸馏后的 Skill 和统计摘要；没有上传完整游戏脚本、完整对白 TSV/TXT、CG、补丁包或可替代原作体验的文本集合。
 
-*WHITE ALBUM2*, Setsuna Ogiso, and related game materials belong to their respective rights holders. This repository is an analytical/transformative skill prompt and does not redistribute original game text or assets.
+## 其他参考来源
 
+- 官方角色介绍与官方专题页。
+- 公开剧情梗概与角色资料页。
+- 玩家路线分析与感想文章，用作低权重解释材料。
+
+## 版权与引用边界
+
+《WHITE ALBUM2》、小木曾雪菜及相关游戏素材属于各自权利方。本仓库是对角色心理结构和表达模式的分析性、转换性整理；请不要把它当作原作文本、汉化补丁或完整语料发布源。
+
+若继续上传更细的抽取语料，建议优先上传统计结果或极小规模引用，并在文件头明确标注上游汉化项目、抽取方式和用途。

@@ -2,7 +2,7 @@
 name: ogiso-setsuna-perspective
 description: |
   《WHITE ALBUM2》角色小木曾雪菜的心理结构与表达方式蒸馏稿。
-  基于官方角色介绍、公开剧情梗概、玩家分析与本地 Special Contents 汉化语料统计，
+  基于官方角色介绍、公开剧情梗概、玩家分析与 GitHub 汉化插件语料统计，
   提炼出一个适合角色扮演、
   情感分析、关系判断和“雪菜会怎么说/怎么做”类问题的角色 Skill。
   当用户提到「雪菜模式」「小木曾雪菜会怎么想」「用雪菜的语气」「Setsuna perspective」时使用。
@@ -144,12 +144,12 @@ description: |
 
 ## 语料校准结果
 
-- 本轮加入了本地 `WHITE ALBUM2 Special Contents` 汉化补丁文本作为语气校准源
+- 本轮加入了 GitHub 上公开的 `WHITE ALBUM2 Special Contents` 中文汉化插件/补丁文本作为语气校准源
 - 已抽取全量带引号中文台词 6029 句，其中雪菜相关篇章候选 2368 句
 - 为了降低串角色风险，又额外切出 240 句高精度子集，用来校准她的语尾、停顿、称呼与撒娇方式
 - 从这批语料看，雪菜的台词不是“华丽”，而是“柔软地逼近”：
   先缓冲，后试探；先体贴，后索取；先自责，后确认你会不会留下
-- 公开发布版不包含原始台词 TSV/TXT、完整游戏脚本、CG 或补丁文本；这些材料仅用于本地统计校准
+- 公开发布版默认只包含蒸馏后的 Skill 与统计摘要，不包含完整游戏脚本、CG 或可替代原作体验的文本集合
 - 最像她的说话动作通常有四种：轻声确认、半步试探、自责缓冲、甜味捉弄。公开版只保留动作概括，不公开原文台词
 
 ## 关系地图
@@ -190,7 +190,7 @@ description: |
 
 ## 诚实边界
 
-此 Skill 基于《WHITE ALBUM2》的官方角色介绍、公开剧情梗概、玩家分析与本地汉化语料统计提炼，存在以下局限：
+此 Skill 基于《WHITE ALBUM2》的官方角色介绍、公开剧情梗概、玩家分析与 GitHub 汉化插件语料统计提炼，存在以下局限：
 - 这是对角色的“认知操作系统”重建，不等于作者唯一官方解释
 - 不同路线会放大雪菜的不同面向，不能把任一路线绝对化
 - 语料中的高精度子集是“雪菜中心篇章对白”，不是百分之百逐句确认的雪菜本人台词，因此更适合校准语气，不适合拿来做逐句考据
@@ -222,13 +222,18 @@ description: |
 - chulip.org coda 雪菜路线感想：
   https://chulip.org/entry/2013/02/15/084826
 
-### 本地语料抽取（未公开随仓库发布）
+### 语料抽取与统计
+- 上游汉化文本项目：`xhyf2666/WhiteAlbum2SpecialCHS`
+  https://github.com/xhyf2666/WhiteAlbum2SpecialCHS
+- 补丁下载 release 来源：`xyx266617/WhiteAlbum2SpecialCHS`
+  https://github.com/xyx266617/WhiteAlbum2SpecialCHS/releases/download/1.0/WHITE.ALBUM2.Special.Contents.rar
+- 公开统计摘要：`corpus/summary.json`
 - `wa2_special_corpus/quotes/all_translated_dialogue.tsv`
 - `wa2_special_corpus/quotes/setsuna_candidate_dialogue.tsv`
 - `wa2_special_corpus/quotes/setsuna_high_precision_dialogue.tsv`
 - `wa2_special_corpus/quotes/setsuna_high_precision_dialogue.txt`
 - `tools/wa2_special_corpus.py`
 
-上述本地语料来自 `WHITE ALBUM2 Special Contents` 汉化文本的私有抽取流程，仅用于统计语气特征和角色中心篇章校准。公开 GitHub 版本不包含原始 TSV/TXT、完整游戏脚本、CG、补丁文本或其他受版权保护的游戏素材。
+上述抽取文件来自本地处理流程，用于统计语气特征和角色中心篇章校准。公开 GitHub 版本保留蒸馏后的 Skill 和统计摘要；若继续公开更细语料，应补全上游汉化项目链接与授权/引用说明，并避免发布可替代原作体验的完整文本集合。
 
 > 本 Skill 为按女娲流程改写的“角色蒸馏版”，并经过补丁台词语料二次校准，重点是稳定复现小木曾雪菜的关系判断、情绪结构和说话手感。
